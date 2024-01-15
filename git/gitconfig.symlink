@@ -5,10 +5,12 @@
         protocol = https
 [alias]
         co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
+        br = branch
+        st = status
+        cob = !$ZSH/bin/git-cob
+        undo = !$ZSH/bin/git-undo
+        last = !$ZSH/bin/git-last
+
 [color]
         diff = auto
         status = auto
