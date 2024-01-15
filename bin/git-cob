@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# checkout to branch
-
-git checkout -b

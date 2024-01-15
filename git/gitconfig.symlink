@@ -7,9 +7,9 @@
         co = checkout
         br = branch
         st = status
-        cob = !$ZSH/bin/git-cob
-        undo = !$ZSH/bin/git-undo
-        last = !$ZSH/bin/git-last
+        cob = checkout -b
+        undo = reset --soft HEAD~1
+        last = log -1 HEAD
 
 [color]
         diff = auto
@@ -18,7 +18,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = code
+        editor = code --wait
 [apply]
         whitespace = nowarn
 [mergetool]
