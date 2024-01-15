@@ -13,6 +13,6 @@ sh ~/.dotfiles/script/bootstrap_overwriteAll
 
 echo ">>>>>Setting correct version of node for the course"
 . ~/.dotfiles/nvm/nvm.zsh
-nvm install v12.13
-nvm alias default v12.13
+nvm install v21.5.0
+nvm alias default v21.5.0
 nvm use default
