@@ -27,7 +27,7 @@ Sadly this installation cannot be done with one single command, due to some agre
 1. Run this command:
 
    ```bash
-   sh -c "$(curl -fsSL https://raw.githubusercontent.com/appliedtechnology/salt-jsfs-dotfiles/master/script/saltAutomation.sh)"
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/appliedtechnology/salt-jsfs-dotfiles/master/script/automation.sh)"
    ```
 
 1. Wait for about 35 minutes per computer
