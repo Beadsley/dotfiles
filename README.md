@@ -18,7 +18,7 @@ Inspo taken from [jsfs-tool-dotfiles](https://github.com/michaelmior/dotfiles)
 1. Run this command:
 
    ```bash
-   sh -c "$(curl -fsSL https://raw.githubusercontent.com/appliedtechnology/salt-jsfs-dotfiles/master/script/automation.sh)"
+   sh -c "$(curl -fsSL https://raw.githubusercontent.com/Beadsley/dotfiles/master/script/automation.sh)"
    ```
 
 1. Wait for about 35 minutes per computer
