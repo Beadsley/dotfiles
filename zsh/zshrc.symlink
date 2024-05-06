@@ -4,14 +4,20 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Projects
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
+##############################
+####++++ Load scripts ++++####
+##############################
+# load aliases
+if [[ -a ~/.alias ]]
+then
+  source ~/.alias
+fi
+
+# load localrc
 if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
-
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -28,6 +34,18 @@ do
   source $file
 done
 
+# load nvm-automation
+if which nvm >/dev/null && [[ -a ~/.dotfiles/zsh/.nvm-automation.zsh ]]
+then
+  source ~/.dotfiles/zsh/.nvm-automation.zsh
+fi
+
+####--- Load scripts ---####
+
+
+##############################
+####++++ autocomplete ++++####
+##############################
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit -u
 compinit -u
@@ -39,8 +57,12 @@ do
 done
 
 unset config_files
+####---- autocomplete ----####
 
-# Better history
+
+################################
+####++++ better history ++++####
+################################
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -48,3 +70,4 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+####---- better history ----####
