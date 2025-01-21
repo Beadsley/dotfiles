@@ -10,7 +10,9 @@
         cob = checkout -b
         undo = reset --soft HEAD~1
         last = log -1 HEAD
-
+        last-3 = log head -n 3
+        last-5 = log head -n 5
+        rev = reset --hard head
 [color]
         diff = auto
         status = auto
